@@ -1,0 +1,15 @@
+def calculate_sum_and_average(numbers):
+    if not numbers:
+        return 0,0
+    total_sum = sum(numbers)
+    count = len(numbers)
+    average = total_sum/count
+    return total_sum, average
+
+def main():
+    numbers = [10,20,30,40,50]
+    total_sum, average = calculate_sum_and_average(numbers)
+    print(f"sum : (total_sum)")
+    print(f"average:(average:.2f)")
+if __name__=='__main__':
+    main()
