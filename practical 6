@@ -1,0 +1,14 @@
+#practical 6
+def swap_char(string):
+    if len(string)<4:
+        return "string too short to swap:"
+    swapped_str=string[-2:]+ string[2:-2] + string[:2]
+    return swapped_str
+
+def main():
+    char=input("enter the character to swap:")
+    result=swap_char(char)
+    print("swapped string:",result)
+
+if __name__ == '__main__':
+    main()
