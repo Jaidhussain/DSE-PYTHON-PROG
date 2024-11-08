@@ -1,0 +1,14 @@
+#practical 5
+def main():
+
+    numbers=[2,1,2,3,3,3,4,4,5,5,6,6,6,7,6,3,8,2,2,5,1,2,1,2,3]
+    count={}
+    for num in numbers:
+        if num in count:
+            count[num]+=1
+        else:
+            count[num]=1
+    print("count of given numbers are:")
+    print(count)
+if __name__ == '__main__':
+    main()
