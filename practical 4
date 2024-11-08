@@ -1,0 +1,29 @@
+#programme to create sets and find union, intersection , and difference.
+print("************ without function **************")
+set1={10,20,33,56,88,22,56}
+set2={45,23,33,10,88,34,76}
+print("set1={10,20,33,56,88,22,56}")
+print("set2={45,23,33,10,88,34,76}")
+print("union of sets are:",set1.union(set2))
+print("intersection of sets are:",set1.intersection(set2))
+print("difference of sets are:",set1.difference(set2))
+print()
+
+print("************ with function *************")
+def find_union(set1, set2):
+    return set1.union(set2)
+def find_intersection(set1,set2):
+    return set1.intyersection(set2)
+def find_difference(set1,set2):
+    return set1.difference(set2)
+
+def main():
+    set1={10,20,33,56,88,22,56}
+    set2={45,23,33,10,88,34,76}
+    print("union of sets are:",find_union(set1,set2))
+    print("intersection of sets are:",find_intersection(set1,set2))
+    print("difference of sets are:",find_difference(set1,set2))
+    
+if __name__ == '__main__':
+    main()
+    
