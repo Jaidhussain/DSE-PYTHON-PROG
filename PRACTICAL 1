@@ -1,0 +1,15 @@
+#factorial with function
+
+def fact(n):
+    if (n>=0):
+        f=1
+        for i in range (1,n+1):
+            f*=i
+        return f
+    else:
+        print("negative no. cant't be find factorial.")
+def main():
+    n=int(input("enter the no. to find factorial:"))
+    print("factorial of",n,"is:",fact(n))
+if __name__=='__main__':
+    main()
