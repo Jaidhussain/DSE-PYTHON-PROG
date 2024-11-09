@@ -1,12 +1,14 @@
-#practical 8 programme to create text file using 'r'
+#practical 8 programme to create text file using 'w'
+
 def main():
-    #cities=["mumbai","delhi","banglore","hyderabad","ahmedabad","chennai","kolkata","patna","kanpur","alligarh","dwarka"]
-    with open("indian_cities.txt","r")as file:
+    cities=["w","mumbai","delhi","banglore","hydarabad","ahmedabad","chennai","patna","kanpur","alligarh"]
+    with open("indian_cities.txt","w")as file:
         cities=file.read()
         print(cities)
-        #for city in cities:
-            #file.write(city + "\n")
+        for city in cities:
+            file.write(city + "\n")
 
-    print("file created and cities written to 'indian_cities.txt'.")
-if __name__ == '__main__':
-    main()
+    print("file create and cities written to 'indian_cities.txt'.")
+    if __name__ == '__main__':
+        main()
+
