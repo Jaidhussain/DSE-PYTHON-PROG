@@ -13,7 +13,7 @@ print("************ with function *************")
 def find_union(set1, set2):
     return set1.union(set2)
 def find_intersection(set1,set2):
-    return set1.intyersection(set2)
+    return set1.intersection(set2)
 def find_difference(set1,set2):
     return set1.difference(set2)
 
