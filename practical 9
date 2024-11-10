@@ -1,0 +1,20 @@
+### Question - 9
+'''Write a Python program which reads the data from two input files having Employee Names and 
+merges them into one output file. '''
+def main():
+    file1='Question_9_input1.txt'  # input file 1   ( in both file employee names are sprated by new line
+    file2='Question_9_input2.txt'   # input file 2
+    output_file="Question_9_output.txt"  # output file ,  will contain employee name of both input files 
+    names=[]
+    with open(file1, 'r') as fh:
+        names.extend(fh.readlines())  # fh.readlines()  return list of lines 
+        names[len(names)-1]+="\n"  # add new line char to last element of list 
+    
+    with open(file2, 'r') as fh:
+        names.extend(fh.readlines())
+
+    with open(output_file, 'w') as fh :
+        fh.writelines(names)   # write all lines in output file 
+
+if __name__=="__main__":
+    main()
