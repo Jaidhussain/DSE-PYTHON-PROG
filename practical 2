@@ -1,26 +1,20 @@
-#question 2 programme to generate prime number between 1 to n.
-
-def isprime(num):
-    for j in range (2, int(num**0.5)+1):
-        if num%j==0:
+###  Question - 2 
+'''
+Write a Python program to generate prime numbers between 1 to n, where n is provided as input by 
+the user.
+'''
+def isPrime(num):
+    for i in range(2,int(num**0.5)+1):
+        if num%i == 0:
             return False
     return True
+
 def main():
-
-    n=int(input("enter the value : "))
-    print(f'prime numbers between 1 to (n)are :')
-    if (n<=1):
-        print("does not exist")
-    else:
-        for i in range (2,n):
-            if (i<=3 and i>1):
-                print(i)
-
-        else:
-            if isprime(i):
-                print(i)
+    num=int(input("Enter a  number : "))
+    print(f"Prime numbers between {1} to {num} are :")
+    for el in range(2,num+1):
+        if isPrime(el):
+            print(el,end=" ")
 
 if __name__=='__main__':
     main()
-
-
