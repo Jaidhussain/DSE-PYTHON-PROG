@@ -1,14 +1,16 @@
-#practical 8 programme to create text file using 'w'
-
+### Question - 8
+"""
+Write a Python program to create a text file having five lines about your college using Writelines() function 
+"""
 def main():
-    cities=["w","mumbai","delhi","banglore","hydarabad","ahmedabad","chennai","patna","kanpur","alligarh"]
-    with open("indian_cities.txt","w")as file:
-        cities=file.read()
-        print(cities)
-        for city in cities:
-            file.write(city + "\n")
+    lines=[]
+    for _ in range(5):
+        line=input("Write a line about your columnlege : ")
+        lines.append(line+" \n")
 
-    print("file create and cities written to 'indian_cities.txt'.")
-    if __name__ == '__main__':
-        main()
+    # create text file to write the lines about columnlege
+    with open('Question_8.txt','w') as fh:
+        fh.writelines(lines)
 
+if __name__=="__main__":
+    main()
