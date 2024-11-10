@@ -1,14 +1,17 @@
-#practical 5
+### Question - 5
+"""
+Given a list of numbers, write a Python program to count the number of times an element occurs in a 
+list and create a dictionary with element:count as key:value pairs
+"""
 def main():
-
-    numbers=[2,1,2,3,3,3,4,4,5,5,6,6,6,7,6,3,8,2,2,5,1,2,1,2,3]
-    count={}
-    for num in numbers:
-        if num in count:
-            count[num]+=1
+    numbers=[1,4,3,2,4,2,3,4,6,9,0,2,1,4]
+    ncd = {} # num count dict
+    for el in numbers:
+        if el in ncd:
+            ncd[el]+=1
         else:
-            count[num]=1
-    print("count of given numbers are:")
-    print(count)
-if __name__ == '__main__':
+            ncd[el]=1
+    print(f"Dictionary of numbers count is : {ncd}")
+    
+if __name__=="__main__":
     main()
