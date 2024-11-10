@@ -1,12 +1,16 @@
-#practical 7 programme to create text file using 'r'
-def main():
-    #cities=["mumbai","delhi","banglore","hyderabad","ahmedabad","chennai","kolkata","patna","kanpur","alligarh","dwarka"]
-    with open("indian_cities.txt","r")as file:
-        cities=file.read()
-        print(cities)
-        #for city in cities:
-            #file.write(city + "\n")
+## Question - 7
+"""
+ Write a Python program to create a text file having names of ten Indian cities. 
+"""
 
-    print("file created and cities written to 'indian_cities.txt'.")
-if __name__ == '__main__':
+def main():
+    i_c_n= input("Enter ten indian cities name seprated by ','  : ").split(',') # indian cities names
+    if len(i_c_n) < 10:
+        print('Cities names are less than 10 ')
+    else:
+        fh=open("Question_7.txt",'w')
+        for city in i_c_n :
+            fh.write(city.strip()+'\n')
+
+if __name__=="__main__":
     main()
