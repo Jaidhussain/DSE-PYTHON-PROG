@@ -1,14 +1,12 @@
-#practical 6
-def swap_char(string):
-    if len(string)<4:
-        return "string too short to swap:"
-    swapped_str=string[-2:]+ string[2:-2] + string[:2]
-    return swapped_str
-
+### Question - 6
+"""
+Write a Python program to swap the first two and last two characters in a given string.
+"""
 def main():
-    char=input("enter the character to swap:")
-    result=swap_char(char)
-    print("swapped string:",result)
+    mystr = input("Write word for string : ")
+    swapped_str=mystr[-1:-3:-1]+mystr[2:-2]+mystr[1::-1]
+    print(f"After swapping first two character of string with last two , string converted to -  {swapped_str}")
 
-if __name__ == '__main__':
+
+if __name__=="__main__":
     main()
