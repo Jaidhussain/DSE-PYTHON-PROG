@@ -1,0 +1,18 @@
+""" write a python programe to create a csv file having student data: Roll no ,
+Enrollment no, name , course, semester"""
+import csv
+filename="student_data2.csv"
+header=["Roll no.","Enrollment no.","Name","Course","Semester"]
+n=int(input("Enter the no. of Data"))
+with open(filename,mode="w",newline=" ") as file:
+    writer=csv.writer(file)
+    writer.writerow(header)
+    for i in range(n):
+        print("Enter the details of student")
+        Roll_no=int(input("Enter the Roll no."))
+        Enrollment_no=int(input("Enter the Enrollment no."))
+        Name=(input("Enter the Name of student"))
+        Course=input("Enter the Course")
+        Semester=int(input("Enter the semester"))
+        writer.writerow([Roll_no, Enrollment_no, Name, Course, Semester])
+print("written successful")
