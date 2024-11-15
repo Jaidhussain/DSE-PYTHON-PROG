@@ -1,0 +1,16 @@
+"""write a python program library to read the csv file created in the above programe and
+filter out record of II semester students."""
+import csv
+with open("student_data2.csv","r")as file1:
+    file_read=csv.reader(file1)
+    header=next(file_read)
+    sem_index=header.index("semester")
+    for row in file_read:
+        if row[sem_index]=="2":
+            filter_row=row
+print(filter_row)
+with open("II_sem.csv","w",newline="")as output_file:
+          to_write=csv.writer(output_file)
+          to_write.writerow(header)
+          to_write.writerow(filter_row)
+print("successfully written in II sem student file")
